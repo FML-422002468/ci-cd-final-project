@@ -1,0 +1,196 @@
+2026-01-15T16:40:45.3462970Z Current runner version: '2.331.0'
+2026-01-15T16:40:45.3486272Z ##[group]Runner Image Provisioner
+2026-01-15T16:40:45.3487127Z Hosted Compute Agent
+2026-01-15T16:40:45.3487701Z Version: 20251211.462
+2026-01-15T16:40:45.3488314Z Commit: 6cbad8c2bb55d58165063d031ccabf57e2d2db61
+2026-01-15T16:40:45.3488956Z Build Date: 2025-12-11T16:28:49Z
+2026-01-15T16:40:45.3489641Z Worker ID: {c40218b4-10e8-4196-856e-f00d6e06966f}
+2026-01-15T16:40:45.3490514Z ##[endgroup]
+2026-01-15T16:40:45.3491012Z ##[group]Operating System
+2026-01-15T16:40:45.3491615Z Ubuntu
+2026-01-15T16:40:45.3492068Z 24.04.3
+2026-01-15T16:40:45.3492531Z LTS
+2026-01-15T16:40:45.3492930Z ##[endgroup]
+2026-01-15T16:40:45.3493509Z ##[group]Runner Image
+2026-01-15T16:40:45.3494014Z Image: ubuntu-24.04
+2026-01-15T16:40:45.3494505Z Version: 20260105.202.1
+2026-01-15T16:40:45.3495554Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260105.202/images/ubuntu/Ubuntu2404-Readme.md
+2026-01-15T16:40:45.3496999Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260105.202
+2026-01-15T16:40:45.3498041Z ##[endgroup]
+2026-01-15T16:40:45.3499085Z ##[group]GITHUB_TOKEN Permissions
+2026-01-15T16:40:45.3501056Z Contents: read
+2026-01-15T16:40:45.3501605Z Metadata: read
+2026-01-15T16:40:45.3502065Z Packages: read
+2026-01-15T16:40:45.3502680Z ##[endgroup]
+2026-01-15T16:40:45.3504721Z Secret source: Actions
+2026-01-15T16:40:45.3505397Z Prepare workflow directory
+2026-01-15T16:40:45.3841625Z Prepare all required actions
+2026-01-15T16:40:45.3879469Z Getting action download info
+2026-01-15T16:40:45.7752227Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2026-01-15T16:40:45.9159817Z Download action repository 'actions/setup-python@v4' (SHA:7f4fc3e22c37d6ff65e88745f38bd3157c663f7c)
+2026-01-15T16:40:46.1204454Z Complete job name: build-and-test
+2026-01-15T16:40:46.1917799Z ##[group]Run actions/checkout@v3
+2026-01-15T16:40:46.1918746Z with:
+2026-01-15T16:40:46.1919345Z   repository: FML-422002468/OpenShift-CI-CD-Pipeline-Project
+2026-01-15T16:40:46.1920426Z   token: ***
+2026-01-15T16:40:46.1920980Z   ssh-strict: true
+2026-01-15T16:40:46.1921490Z   persist-credentials: true
+2026-01-15T16:40:46.1922004Z   clean: true
+2026-01-15T16:40:46.1922463Z   sparse-checkout-cone-mode: true
+2026-01-15T16:40:46.1923003Z   fetch-depth: 1
+2026-01-15T16:40:46.1923447Z   fetch-tags: false
+2026-01-15T16:40:46.1923905Z   lfs: false
+2026-01-15T16:40:46.1924339Z   submodules: false
+2026-01-15T16:40:46.1924819Z   set-safe-directory: true
+2026-01-15T16:40:46.1925611Z ##[endgroup]
+2026-01-15T16:40:46.2776902Z Syncing repository: FML-422002468/OpenShift-CI-CD-Pipeline-Project
+2026-01-15T16:40:46.2778883Z ##[group]Getting Git version info
+2026-01-15T16:40:46.2780222Z Working directory is '/home/runner/work/OpenShift-CI-CD-Pipeline-Project/OpenShift-CI-CD-Pipeline-Project'
+2026-01-15T16:40:46.2781712Z [command]/usr/bin/git version
+2026-01-15T16:40:46.2856348Z git version 2.52.0
+2026-01-15T16:40:46.2882685Z ##[endgroup]
+2026-01-15T16:40:46.2896993Z Temporarily overriding HOME='/home/runner/work/_temp/ca2146de-7600-4e02-94ae-44158c598c14' before making global git config changes
+2026-01-15T16:40:46.2900592Z Adding repository directory to the temporary git global config as a safe directory
+2026-01-15T16:40:46.2902384Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/OpenShift-CI-CD-Pipeline-Project/OpenShift-CI-CD-Pipeline-Project
+2026-01-15T16:40:46.2938358Z Deleting the contents of '/home/runner/work/OpenShift-CI-CD-Pipeline-Project/OpenShift-CI-CD-Pipeline-Project'
+2026-01-15T16:40:46.2941315Z ##[group]Initializing the repository
+2026-01-15T16:40:46.2944615Z [command]/usr/bin/git init /home/runner/work/OpenShift-CI-CD-Pipeline-Project/OpenShift-CI-CD-Pipeline-Project
+2026-01-15T16:40:46.3057322Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-01-15T16:40:46.3058530Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-01-15T16:40:46.3060087Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-01-15T16:40:46.3060987Z hint: call:
+2026-01-15T16:40:46.3061582Z hint:
+2026-01-15T16:40:46.3062480Z hint: 	git config --global init.defaultBranch <name>
+2026-01-15T16:40:46.3063247Z hint:
+2026-01-15T16:40:46.3064045Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-01-15T16:40:46.3065140Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-01-15T16:40:46.3065992Z hint:
+2026-01-15T16:40:46.3066434Z hint: 	git branch -m <name>
+2026-01-15T16:40:46.3067130Z hint:
+2026-01-15T16:40:46.3067923Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-01-15T16:40:46.3069459Z Initialized empty Git repository in /home/runner/work/OpenShift-CI-CD-Pipeline-Project/OpenShift-CI-CD-Pipeline-Project/.git/
+2026-01-15T16:40:46.3072131Z [command]/usr/bin/git remote add origin https://github.com/FML-422002468/OpenShift-CI-CD-Pipeline-Project
+2026-01-15T16:40:46.3106554Z ##[endgroup]
+2026-01-15T16:40:46.3107340Z ##[group]Disabling automatic garbage collection
+2026-01-15T16:40:46.3109031Z [command]/usr/bin/git config --local gc.auto 0
+2026-01-15T16:40:46.3134499Z ##[endgroup]
+2026-01-15T16:40:46.3135205Z ##[group]Setting up auth
+2026-01-15T16:40:46.3139445Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-01-15T16:40:46.3165978Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-01-15T16:40:46.3502325Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-01-15T16:40:46.3531614Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-01-15T16:40:46.3755365Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-01-15T16:40:46.3792547Z ##[endgroup]
+2026-01-15T16:40:46.3803549Z ##[group]Fetching the repository
+2026-01-15T16:40:46.3805153Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +627d104a0af6cfcddecd366ef9b620133316e870:refs/remotes/origin/main
+2026-01-15T16:40:46.6324158Z remote: Enumerating objects: 6, done.        
+2026-01-15T16:40:46.6325277Z remote: Counting objects:  16% (1/6)        
+2026-01-15T16:40:46.6326338Z remote: Counting objects:  33% (2/6)        
+2026-01-15T16:40:46.6327075Z remote: Counting objects:  50% (3/6)        
+2026-01-15T16:40:46.6327810Z remote: Counting objects:  66% (4/6)        
+2026-01-15T16:40:46.6328552Z remote: Counting objects:  83% (5/6)        
+2026-01-15T16:40:46.6329317Z remote: Counting objects: 100% (6/6)        
+2026-01-15T16:40:46.6330248Z remote: Counting objects: 100% (6/6), done.        
+2026-01-15T16:40:46.6331134Z remote: Compressing objects:  25% (1/4)        
+2026-01-15T16:40:46.6331917Z remote: Compressing objects:  50% (2/4)        
+2026-01-15T16:40:46.6332688Z remote: Compressing objects:  75% (3/4)        
+2026-01-15T16:40:46.6333462Z remote: Compressing objects: 100% (4/4)        
+2026-01-15T16:40:46.6334281Z remote: Compressing objects: 100% (4/4), done.        
+2026-01-15T16:40:46.6457947Z remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)        
+2026-01-15T16:40:46.6530582Z From https://github.com/FML-422002468/OpenShift-CI-CD-Pipeline-Project
+2026-01-15T16:40:46.6532385Z  * [new ref]         627d104a0af6cfcddecd366ef9b620133316e870 -> origin/main
+2026-01-15T16:40:46.6564059Z ##[endgroup]
+2026-01-15T16:40:46.6564897Z ##[group]Determining the checkout info
+2026-01-15T16:40:46.6566266Z ##[endgroup]
+2026-01-15T16:40:46.6567214Z ##[group]Checking out the ref
+2026-01-15T16:40:46.6570381Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-01-15T16:40:46.6615390Z Switched to a new branch 'main'
+2026-01-15T16:40:46.6618172Z branch 'main' set up to track 'origin/main'.
+2026-01-15T16:40:46.6624882Z ##[endgroup]
+2026-01-15T16:40:46.6658025Z [command]/usr/bin/git log -1 --format='%H'
+2026-01-15T16:40:46.6679060Z '627d104a0af6cfcddecd366ef9b620133316e870'
+2026-01-15T16:40:46.6916474Z ##[group]Run actions/setup-python@v4
+2026-01-15T16:40:46.6917077Z with:
+2026-01-15T16:40:46.6917458Z   python-version: 3.9
+2026-01-15T16:40:46.6917894Z   check-latest: false
+2026-01-15T16:40:46.6918498Z   token: ***
+2026-01-15T16:40:46.6918907Z   update-environment: true
+2026-01-15T16:40:46.6919378Z   allow-prereleases: false
+2026-01-15T16:40:46.6919829Z ##[endgroup]
+2026-01-15T16:40:46.8660149Z ##[group]Installed versions
+2026-01-15T16:40:46.9472097Z Successfully set up CPython (3.9.25)
+2026-01-15T16:40:46.9473925Z ##[endgroup]
+2026-01-15T16:40:46.9617576Z ##[group]Run python -m pip install --upgrade pip
+2026-01-15T16:40:46.9619255Z [36;1mpython -m pip install --upgrade pip[0m
+2026-01-15T16:40:46.9620881Z [36;1mpip install flake8 nose[0m
+2026-01-15T16:40:46.9622237Z [36;1mpip install -r requirements.txt || true[0m
+2026-01-15T16:40:46.9672019Z shell: /usr/bin/bash -e {0}
+2026-01-15T16:40:46.9673167Z env:
+2026-01-15T16:40:46.9674316Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:46.9676253Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2026-01-15T16:40:46.9678159Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:46.9680137Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:46.9681973Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:46.9683764Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2026-01-15T16:40:46.9685278Z ##[endgroup]
+2026-01-15T16:40:49.8039157Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.9.25/x64/lib/python3.9/site-packages (25.3)
+2026-01-15T16:40:50.5643784Z Collecting flake8
+2026-01-15T16:40:50.6843366Z   Downloading flake8-7.3.0-py2.py3-none-any.whl.metadata (3.8 kB)
+2026-01-15T16:40:50.7090840Z Collecting nose
+2026-01-15T16:40:50.7420140Z   Downloading nose-1.3.7-py3-none-any.whl.metadata (1.7 kB)
+2026-01-15T16:40:50.7664825Z Collecting mccabe<0.8.0,>=0.7.0 (from flake8)
+2026-01-15T16:40:50.7994572Z   Downloading mccabe-0.7.0-py2.py3-none-any.whl.metadata (5.0 kB)
+2026-01-15T16:40:50.8270362Z Collecting pycodestyle<2.15.0,>=2.14.0 (from flake8)
+2026-01-15T16:40:50.8607519Z   Downloading pycodestyle-2.14.0-py2.py3-none-any.whl.metadata (4.5 kB)
+2026-01-15T16:40:50.8922268Z Collecting pyflakes<3.5.0,>=3.4.0 (from flake8)
+2026-01-15T16:40:50.9299020Z   Downloading pyflakes-3.4.0-py2.py3-none-any.whl.metadata (3.5 kB)
+2026-01-15T16:40:50.9674103Z Downloading flake8-7.3.0-py2.py3-none-any.whl (57 kB)
+2026-01-15T16:40:51.0363533Z Downloading mccabe-0.7.0-py2.py3-none-any.whl (7.3 kB)
+2026-01-15T16:40:51.0713748Z Downloading pycodestyle-2.14.0-py2.py3-none-any.whl (31 kB)
+2026-01-15T16:40:51.1089343Z Downloading pyflakes-3.4.0-py2.py3-none-any.whl (63 kB)
+2026-01-15T16:40:51.1513796Z Downloading nose-1.3.7-py3-none-any.whl (154 kB)
+2026-01-15T16:40:51.2554709Z Installing collected packages: nose, pyflakes, pycodestyle, mccabe, flake8
+2026-01-15T16:40:51.4706132Z 
+2026-01-15T16:40:51.4731389Z Successfully installed flake8-7.3.0 mccabe-0.7.0 nose-1.3.7 pycodestyle-2.14.0 pyflakes-3.4.0
+2026-01-15T16:40:51.8377017Z ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+2026-01-15T16:40:51.8776018Z ##[group]Run flake8 .
+2026-01-15T16:40:51.8776303Z [36;1mflake8 .[0m
+2026-01-15T16:40:51.8811470Z shell: /usr/bin/bash -e {0}
+2026-01-15T16:40:51.8811723Z env:
+2026-01-15T16:40:51.8811969Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:51.8812386Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2026-01-15T16:40:51.8812811Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:51.8813381Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:51.8813734Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:51.8814112Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2026-01-15T16:40:51.8814421Z ##[endgroup]
+2026-01-15T16:40:52.3547899Z ##[group]Run nosetests
+2026-01-15T16:40:52.3548176Z [36;1mnosetests[0m
+2026-01-15T16:40:52.3581031Z shell: /usr/bin/bash -e {0}
+2026-01-15T16:40:52.3581270Z env:
+2026-01-15T16:40:52.3581511Z   pythonLocation: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:52.3581938Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib/pkgconfig
+2026-01-15T16:40:52.3582362Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:52.3582731Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:52.3583107Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.9.25/x64
+2026-01-15T16:40:52.3583536Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.9.25/x64/lib
+2026-01-15T16:40:52.3583890Z ##[endgroup]
+2026-01-15T16:40:52.8945754Z 
+2026-01-15T16:40:52.8946502Z ----------------------------------------------------------------------
+2026-01-15T16:40:52.8947091Z Ran 0 tests in 0.000s
+2026-01-15T16:40:52.8947301Z 
+2026-01-15T16:40:52.8947411Z OK
+2026-01-15T16:40:52.9209530Z Post job cleanup.
+2026-01-15T16:40:53.0822909Z Post job cleanup.
+2026-01-15T16:40:53.1551541Z [command]/usr/bin/git version
+2026-01-15T16:40:53.1585343Z git version 2.52.0
+2026-01-15T16:40:53.1629173Z Temporarily overriding HOME='/home/runner/work/_temp/49de9454-ec6b-4035-8fff-234ef059678a' before making global git config changes
+2026-01-15T16:40:53.1630782Z Adding repository directory to the temporary git global config as a safe directory
+2026-01-15T16:40:53.1634525Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/OpenShift-CI-CD-Pipeline-Project/OpenShift-CI-CD-Pipeline-Project
+2026-01-15T16:40:53.1665594Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-01-15T16:40:53.1694711Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-01-15T16:40:53.1922805Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-01-15T16:40:53.1943057Z http.https://github.com/.extraheader
+2026-01-15T16:40:53.1954643Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-01-15T16:40:53.1984320Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-01-15T16:40:53.2306490Z Cleaning up orphan processes
