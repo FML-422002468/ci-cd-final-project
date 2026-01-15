@@ -1,38 +1,26 @@
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: cleanup-task
+  name: cleanup
 spec:
-  workspaces:
-    - name: shared-workspace
   steps:
     - name: cleanup
-      image: ubuntu:20.04
+      image: ubuntu
       script: |
         #!/bin/bash
-        echo "Cleaning up workspace..."
-        rm -rf $(workspaces.shared-workspace.path)/*
+        echo "Cleaning up workspace"
+        rm -rf /workspace/*
 
 ---
 apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
-  name: test-task
+  name: run-tests
 spec:
-  workspaces:
-    - name: shared-workspace
   steps:
-    - name: install-dependencies
+    - name: run-nose-tests
       image: python:3.9
       script: |
         #!/bin/bash
-        python -m pip install --upgrade pip
         pip install nose
-        pip install -r $(workspaces.shared-workspace.path)/requirements.txt || true
-
-    - name: run-tests
-      image: python:3.9
-      script: |
-        #!/bin/bash
-        echo "Running unit tests..."
-        nosetests $(workspaces.shared-workspace.path)
+        nosetests
